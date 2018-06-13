@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -17,31 +18,35 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
         android:orientation="horizontal">
+
         <Button
             android:id="@+id/minus"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="decrement"
-            android:text="@string/Minus" />
+            android:text="@string/minus" />
+
         <TextView
             android:id="@+id/quantity_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:text="0"
+            android:text="@string/initial"
             android:textColor="#000000"
             android:textSize="16sp" />
+
         <Button
             android:id="@+id/plus"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="increment"
-            android:text="@string/Plus" />
+            android:text="@string/plus" />
     </LinearLayout>
+
     <TextView
         android:id="@+id/title2"
         android:layout_width="wrap_content"
@@ -52,6 +57,15 @@
         android:textAllCaps="true"
         android:textSize="16sp" />
     <TextView
+        android:id="@+id/welcome_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/dynamic"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+    <TextView
         android:id="@+id/price_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -60,6 +74,7 @@
         android:text="@string/amount"
         android:textColor="#000000"
         android:textSize="16sp" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -67,6 +82,7 @@
         android:layout_marginStart="16dp"
         android:onClick="submitOrder"
         android:text="@string/order" />
+
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
@@ -74,5 +90,5 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
         android:onClick="reset"
-        android:text="@string/Reset" />
+        android:text="@string/reset" />
 </LinearLayout>

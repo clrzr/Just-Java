@@ -12,7 +12,9 @@ import java.util.Locale;
  * This app displays an order form to order coffee.
  */
 public class MainActivity extends AppCompatActivity {
-    int quantity=0;
+    int quantity = 1;
+    String priceMessage = "Thank You";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,23 +25,41 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int number_of_coffee=quantity;
-        displayPrice(number_of_coffee*700);
+        int number_of_coffee = quantity;
+        int price = number_of_coffee * 700;
+        if (quantity < 1)
+            priceMessage = "\u270B\u270B Please order at least one cup!";
+        displayMessage(priceMessage);
+        priceMessage="Thank You!";
+        displayMessage(priceMessage);
+        displayPrice(price);
+
     }
+
     public void increment(View view) {
-        quantity=quantity+1;
+        quantity = quantity + 1;
         display(quantity);
     }
+
     public void decrement(View view) {
-        quantity=quantity-1;
-        if (quantity<1)
-            quantity=0;
+        quantity = quantity - 1;
+        if (quantity < 1)
+            quantity = 0;
         display(quantity);
     }
+
     public void reset(View view) {
-        quantity = 0;
-        displayPrice(0);
-        display(quantity);
+        if (quantity < 1)
+            priceMessage = "Click the (+) button, then order";
+            else
+                quantity=3;
+                if (quantity > 1)
+                    priceMessage = "Welcome";
+                    quantity=0;
+                    displayPrice(0);
+                    display(quantity);
+                    displayMessage(priceMessage);
+        displayMessage(priceMessage);
     }
 
     /**
@@ -49,8 +69,16 @@ public class MainActivity extends AppCompatActivity {
         TextView quantityTextView = findViewById(R.id.quantity_text_view);
         quantityTextView.setText(getString(R.string.coffee, amount));
     }
+
     private void displayPrice(int number) {
         TextView priceTextView = findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance(new Locale("en","NG")).format(number));
+        priceTextView.setText(NumberFormat.getCurrencyInstance(new Locale("en", "NG")).format(number));
+    }
+
+    private void displayMessage(String message) {
+        TextView welcomeTextView = findViewById(R.id.welcome_text_view);
+        welcomeTextView.setText(message);
+
+
     }
 }

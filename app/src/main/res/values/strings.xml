@@ -5,7 +5,9 @@
     <string name="amount">₦0</string>
     <string name="order">Order</string>
     <string name="coffee">%d</string>
-    <string name="Plus">+</string>
-    <string name="Minus">-</string>
-    <string name="Reset">Reset</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="reset">Reset</string>
+    <string name="dynamic">Welcome</string>
+    <string name="initial">1</string>
 </resources>
