@@ -13,6 +13,7 @@ import java.util.Locale;
  */
 public class MainActivity extends AppCompatActivity {
     int quantity = 1;
+    int checker = 0;
     String priceMessage = "Thank You";
 
     @Override
@@ -29,33 +30,36 @@ public class MainActivity extends AppCompatActivity {
         int price = number_of_coffee * 700;
         if (quantity < 1)
             priceMessage = "\u270B\u270B Please order at least one cup!";
+            else
+                priceMessage="Thank You!";
+                displayMessage(priceMessage);
+                displayPrice(price);
         displayMessage(priceMessage);
-        priceMessage="Thank You!";
-        displayMessage(priceMessage);
-        displayPrice(price);
-
     }
 
     public void increment(View view) {
         quantity = quantity + 1;
+        checker = checker + 1;
         display(quantity);
     }
 
     public void decrement(View view) {
         quantity = quantity - 1;
+        checker = checker - 1;
         if (quantity < 1)
             quantity = 0;
         display(quantity);
     }
 
     public void reset(View view) {
-        if (quantity < 1)
+        if (checker < 2)
             priceMessage = "Click the (+) button, then order";
             else
-                quantity=3;
-                if (quantity > 1)
+                checker=2;
+                if (checker > 1)
                     priceMessage = "Welcome";
-                    quantity=0;
+                    quantity=1;
+                    checker=1;
                     displayPrice(0);
                     display(quantity);
                     displayMessage(priceMessage);
