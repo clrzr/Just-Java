@@ -12,7 +12,7 @@ import java.util.Locale;
  * This app displays an order form to order coffee.
  */
 public class MainActivity extends AppCompatActivity {
-    int quantity = 1;
+    int quantity = 0;
     int checker = 0;
     String priceMessage = "Thank You";
 
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 checker=2;
                 if (checker > 1)
                     priceMessage = "Welcome";
-                    quantity=1;
+                    quantity=0;
                     checker=1;
                     displayPrice(0);
                     display(quantity);

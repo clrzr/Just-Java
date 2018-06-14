@@ -9,5 +9,5 @@
     <string name="minus">-</string>
     <string name="reset">Reset</string>
     <string name="dynamic">Welcome</string>
-    <string name="initial">1</string>
+    <string name="initial">0</string>
 </resources>
