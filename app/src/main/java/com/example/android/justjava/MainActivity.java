@@ -12,9 +12,9 @@ import java.util.Locale;
  * This app displays an order form to order coffee.
  */
 public class MainActivity extends AppCompatActivity {
-    int quantity = 0;
-    int checker = 0;
-    String priceMessage = "Thank You";
+    private int quantity = 0;
+    private int checker = 0;
+    private String priceMessage = "Thank You";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

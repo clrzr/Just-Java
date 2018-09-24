@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorAccent"
     tools:context=".MainActivity">
 
     <TextView
@@ -30,7 +29,6 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="decrement"
-            android:textColor="#FFA6591E"
             android:text="@string/minus" />
 
         <TextView
@@ -40,7 +38,6 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:text="@string/initial"
-            android:textColor="#FF7F5332"
             android:textSize="16sp" />
 
         <Button
@@ -48,7 +45,6 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="increment"
-            android:textColor="#FFA6591E"
             android:text="@string/plus" />
     </LinearLayout>
 
@@ -70,7 +66,6 @@
         android:layout_marginStart="20dp"
         android:textColorHint="#FFA6591E"
         android:text="@string/dynamic"
-        android:textColor="#FF7F5332"
         android:textSize="16sp" />
     <TextView
         android:id="@+id/price_text_view"
@@ -79,7 +74,7 @@
         android:layout_marginBottom="16dp"
         android:layout_marginStart="20dp"
         android:text="@string/amount"
-        android:textColor="#FF7F5332"
+        android:textColorHint="#FFA6591E"
         android:textSize="16sp" />
 
     <Button
@@ -88,7 +83,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:onClick="submitOrder"
-        android:textColor="#FFA6591E"
         android:text="@string/order" />
 
     <Button
@@ -98,7 +92,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
         android:onClick="reset"
-        android:textColor="#FFA6591E"
         android:text="@string/reset" />
     <ImageView
         android:contentDescription="@string/img_description"
